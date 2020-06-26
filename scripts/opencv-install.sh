@@ -1,0 +1,10 @@
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+    -D CMAKE_CXX_FLAGS=-isystem\ /usr/local/Cellar/tesseract/4.1.1/include \
+    -D CMAKE_INSTALL_PREFIX=/usr/local \
+    -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+    -D BUILD_opencv_python2=OFF \
+    -D BUILD_opencv_python3=OFF \
+    -D INSTALL_PYTHON_EXAMPLES=OFF \
+    -D INSTALL_C_EXAMPLES=OFF \
+    -D OPENCV_ENABLE_NONFREE=ON \
+    -D BUILD_EXAMPLES=ON ..

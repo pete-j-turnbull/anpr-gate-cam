@@ -1,0 +1,36 @@
+{
+  "name": "anpr-gate-cam-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "watch": "export $(cat .env.local | xargs) && nodemon .",
+    "start": "export $(cat .env.local | xargs) && node .",
+    "migrate": "export $(cat .env.local | xargs) && knex migrate:latest",
+    "rollback": "export $(cat .env.local | xargs) && knex migrate:rollback"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "prettier": "^1.16.4"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "bcrypt-nodejs": "0.0.3",
+    "boom": "^7.2.0",
+    "bunyan": "^1.8.12",
+    "knex": "^0.19.2",
+    "koa": "^2.7.0",
+    "koa-bearer-token": "^1.0.0",
+    "koa-body": "^4.1.0",
+    "koa-multer": "^1.0.2",
+    "koa-qs": "^2.0.0",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.14",
+    "moment": "^2.24.0",
+    "moment-round": "^1.0.1",
+    "moment-timezone": "^0.5.26",
+    "node-fetch": "^2.6.0",
+    "pg": "^7.12.1",
+    "uuid": "^3.3.3"
+  }
+}
